@@ -14,10 +14,19 @@ function showPage(pageName)
 	console.log("current page = " + currentPage);
 	
 	//currentPage.className = "deselected";
+	//document.getElementById("myDropdown").classList.toggle("show");
+	//currentPage.classList.toggle("show");
+	
+	//(currentPage == "all_about"? document.getElementById("aboutEpncDrop").classList.toggle("show"): console.log("not this one"););
+	/*if(pageName === "all_about"){
+		document.getElementById("aboutEpncDrop").classList.toggle("show");
+		console.log("this one");
+	}*/
 	
 	document.getElementById("home").className = "deselected";
 	document.getElementById("all_about").className = "deselected";
 	document.getElementById("contact_us").className = "deselected";
+	document.getElementById("about_us").className = "deselected";
 	
 	currentPage.className = "selected";
 }
