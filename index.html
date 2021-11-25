@@ -3,7 +3,7 @@
         * Filename:index.html
         * Version: v1.00
         * Copyright (c) 2021 EPNC Energy LTD. All Rights Reserved.
-        * Written by: Euan Cliffordt
+        * Written by: Euan Clifford
         * Date: 16/11/2021
         *  -->
 
@@ -20,27 +20,75 @@
 
 <body onload="showPage('home')">
 
- <div class="epnc_logo">
+ <!--<div class="epnc_logo">
 	<img src="epncLogoGreen.png" alt="EPNC green Logo"/>
- </div>
+ </div>-->
  
- <div class="epnc_logo">
+ <!--<div id="epnc_banner">
 	<img src="epncPowerStation.jpg" alt="EPNC Power Station"/>
- </div>
+ </div>-->
+ <img src="epncLogoGreen.png" id="epnc_logo" alt="EPNC green Logo"/>
+ <img src="epncPowerStation.jpg" id="epnc_banner" alt="EPNC Power Station"/>
 
  
  <div id="menu_bar" ondragstart="return false">
+ 
 	<ul>
+	  <li><a href="#home" onclick="showPage('home')">Home</a></li>
+	  <li class="dropdown" onclick="showPage('all_about')">
+		<a class="dropbtn" >About EPNC</a>
+		<div class="dropdown-content">
+		  <a href="#three">Benifit in 3 sentences</a>
+		  <a href="#six">Benifit in 6 paragraphs</a>
+		  <a href="#How">How we work</a>
+		</div>
+	  </li>
+	  <li class="dropdown" onclick="showPage('about_us')">
+		<a class="dropbtn">About Us</a>
+		<div class="dropdown-content">
+		  <a href="#Edgar">Edgar Goddard</a>
+		  <a href="#Euan">Euan Clifford</a>
+		</div>
+	  </li>
+	  <li><a href="#home" onclick="showPage('contact_us')">Contact Us</a></li>
+	</ul>
+	<!--<button onclick="showPage('home')" class="menu_btn">Home</button>
+	<button onclick="showPage('all_about')" class="menu_btn">About EPNC</button>
+		<div id="aboutEpncDrop" class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		</div>
+	<button onclick="showPage('about_us')" class="menu_btn">About Us</button>
+		<div id="aboutUsDrop" class="dropdown-content">
+			<a href="#">Link 4</a>
+			<a href="#">Link 5</a>
+		</div>
+	<button onclick="showPage('contact_us')" class="menu_btn">Contact Us</button>-->
+	
+	<!--<ul>
 	  <li><a href="#Home" onclick="showPage('home')">Home</a></li>
 	  <li><a href="#allAbout" onclick="showPage('all_about')">About EPNC</a></li>
+		<div id="aboutEpncDrop" class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		</div>
+		<div id="aboutEPNCdrop">
+			<ul>
+				<li><a href="#3Sentences" onclick="showPage('3Sentences')">Benifits in 3 Sentences</a></li>
+				<li><a href="#6Paras" onclick="showPage('6Paras')">Benifits in 6 Paragraphs</a></li>
+				<li><a href="#HowWeWork" onclick="showPage('HowWeWork')">How We Work</a></li>
+			</ul>
+		</div>
 	  <li><a href="#contact" onclick="showPage('contact_us')">Contact Us</a></li>
-	</ul>
+	</ul>-->
  </div>
  
  <div style="clear: both;"></div>
  
- <div id="home" onclick="showPage('home')">
-	<h1> RENEWABLE ENERGEY POWER GRID </h1>
+ <div id="home" class="deselected">
+	<h1> Battery Storage Solutions </h1>
 	 
 	<p>Electrical power needs captured energy to meet the challenges of the future. Grid instability caused by intermittent renewable generation means that captured energy in the form of batteries will form the basis of power grid stability, reduce costs and generate innovative income streams in the future.</p>
 
@@ -48,8 +96,8 @@
 	<p>EPNC Energy has the knowledge and experience of the battery storage market to advise its customers on how to proceed in a cost-effective way.</p>
 </div>
 
-<div id="all_about">
-	<h1>The benefit in three sentences</h1>
+<div id="all_about" class="deselected">
+	<h1 id="three">The benefit in three sentences</h1>
 
 	<h2>EPNC Energy provides battery storage solutions.</h2>
 
@@ -60,7 +108,7 @@
 		
 		<img src="epncBatteryStorage.jpg" alt="EPNC Battery" width="600" height="300" class="center"/>
 		
-	<h2>The benefit to your business in six paragraphs.</h2>
+	<h2 id="six">The benefit to your business in six paragraphs.</h2>
 
 		<p> EPNC Energy provides battery storage solutions. We provide a customer focussed approach that develops innovative battery storage solutions which offer market leading benefits to your business. The team specialise in the following:</p>
 		
@@ -99,7 +147,7 @@
 		
 		<img src="epncBattery.jpg" alt="EPNC Battery" width="600" height="300" class="center"/>
 	
-	<h2>How we work</h2>
+	<h2 id="How">How we work</h2>
 
 		<p>EPNC Energy work at a portfolio and individual site level depending on your specific needs.</p>
 		
@@ -112,40 +160,49 @@
 		<img src="epncDescTwo.jpg" alt="EPNC Description Two" width="100%" height="400" class="full_width"/>
 		
 		<img src="epncEnergyStorage.jpg" alt="EPNC Energy Storage" height="300" class="full_width"/>
-	
-	<h2>Who are we?</h2>
-
-	<h3>Edgar Goddard</h3>
 		
-		<p>Edgar has wide experience of working in the electricity sector. As an executive and senior manager  within large infrastructure companies he has been responsible for policy development and delivery across world class energy companies.</p>
-		
-		<p>He has developed and delivered significant infrastructure investments as well as initiating, defining and directing process improvement resulting in improved company performance.</p>
-		
-		<p>His previous experience covers electricity market operation, the development of commercial and market frameworks, construction, programme management, operations, business transformation and process change, asset management and information services.</p>
-
-		<p>Edgar’s experience and achievements have been against a backdrop of fast-moving development in regulation, the industry, the market and the companies themselves.</p>
-		
-		<p>Edgar entered the energy sector after 10 years as an Engineering Officer in the Royal Navy Submarine Service.</p>
-		
-	<h3>Euan Clifford</h3>
-
-		<p>Euan has worked in the rail sector for many years and has a deep	understanding of the issues the industry faces.  As a senior manager he has been responsible for commercial strategies, leading multi-million pound negotiations and delivering programmes of work.</p>
-		
-		<p>He has delivered significant savings in procurement exercises, obtained start up funding for new programmes and delivered a 3.4TWh flexible energy pricing contract.</p>
-		
-		<p>Euan is a Chartered Manager and he has a wide diversity of skills  in programmes, projects, business change, utility management, commercial agreements and procurement exercises.</p>
 </div>
+	
+	<div id="about_us" class="deselected">
+		<h1>Who are we?</h1>
 
-<div id="contact_us">	
+		<h2 id="Edgar">Edgar Goddard</h2>
+			
+			<p>Edgar has wide experience of working in the electricity sector. As an executive and senior manager  within large infrastructure companies he has been responsible for policy development and delivery across world class energy companies.</p>
+			
+			<p>He has developed and delivered significant infrastructure investments as well as initiating, defining and directing process improvement resulting in improved company performance.</p>
+			
+			<p>His previous experience covers electricity market operation, the development of commercial and market frameworks, construction, programme management, operations, business transformation and process change, asset management and information services.</p>
+
+			<p>Edgar’s experience and achievements have been against a backdrop of fast-moving development in regulation, the industry, the market and the companies themselves.</p>
+			
+			<p>Edgar entered the energy sector after 10 years as an Engineering Officer in the Royal Navy Submarine Service.</p>
+			
+		<h2 id="Euan">Euan Clifford</h2>
+
+			<p>Euan has worked in the rail sector for many years and has a deep	understanding of the issues the industry faces.  As a senior manager he has been responsible for commercial strategies, leading multi-million pound negotiations and delivering programmes of work.</p>
+			
+			<p>He has delivered significant savings in procurement exercises, obtained start up funding for new programmes and delivered a 3.4TWh flexible energy pricing contract.</p>
+			
+			<p>Euan is a Chartered Manager and he has a wide diversity of skills  in programmes, projects, business change, utility management, commercial agreements and procurement exercises.</p>
+	</div>
+
+<div id="contact_us" class="deselected">	
 	<h1>Contact Us</h1>
 
 	<img src="epncContact.jpg" alt="EPNC Contact Us" width="600" height="300" class="center"/>
-
+	
 	<p>Contact EPNC Energy to discuss your needs.</p>
 	
-	  
-
-	<p>Springhill, Chapel Lane, Polruan, Cornwall PL23 1PG</p>
+	<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+		Your Name:<br>
+		<input type="text" name="name"><br>
+		Your E-mail:<br>
+		<input type="text" name="mail"><br>
+		I would like information on:<br>
+		<input type="text" name="info" size="50"><br><br>
+		<input type="submit" value="Send">
+		<input type="reset" value="Reset">
 	
 </div>
 	
